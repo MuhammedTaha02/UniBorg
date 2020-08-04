@@ -36,7 +36,7 @@ from telethon.errors import rpcbaseerrors
 ###            await event.edit("**PURGE** Failed!")
 
 
-@borg.on(admin_cmd(pattern="purge ?(.*)"))
+@borg.on(admin_cmd(pattern="^.purge$"))
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
     msgs = []
